@@ -7,8 +7,6 @@ services:
     container_name: 'ml-docker-gpu'
     restart: always
     runtime: nvidia
-    volumes:
-      - /home/guyzsarun/.jupyter/jupyter_notebook_config
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=all
