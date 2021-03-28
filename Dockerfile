@@ -81,15 +81,6 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate base" >> ~/.bashrc
 
-COPY requirements.txt ./requirements.txt
-
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir --ignore-installed -r requirements.txt
-
-RUN conda remove wrapt
-
-RUN conda install -y -c pytorch cuda100 -c pytorch
-
 RUN apt-get update && apt-get -y install libssl-dev graphviz
 RUN wget https://cmake.org/files/v3.19/cmake-3.19.1.tar.gz && tar -xzvf cmake-3.19.1.tar.gz && cd cmake-3.19.1 && \
     ./bootstrap && \
@@ -113,6 +104,15 @@ RUN apt-get install -y curl grep sed dpkg && \
     dpkg -i tini.deb && \
     rm tini.deb && \
     apt-get clean
+
+COPY requirements.txt ./requirements.txt
+
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install  --user --ignore-installed -r requirements.txt
+
+RUN conda remove wrapt
+
+RUN conda install -y -c pytorch cuda100
 
 RUN apt-get autoremove -y && apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
