@@ -1,5 +1,7 @@
 # ml-docker
 
+![Docker build](https://github.com/guyzsarun/ml-docker/actions/workflows/actions.yml/badge.svg)
+
 GPU Docker image for Machine Learning and Deep Learning projects.
 
 Jupyterlab will be available at port `8888`
