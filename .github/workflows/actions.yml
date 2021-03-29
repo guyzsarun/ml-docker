@@ -47,8 +47,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: guyzsarun/ml-toolkit-gpu:latest
-          # cache-from: type=local,src=/tmp/.buildx-cache
-          # cache-to: type=local,dest=/tmp/.buildx-cache
 
 
       - name: Image Digest
