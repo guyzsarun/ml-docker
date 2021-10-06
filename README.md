@@ -33,4 +33,8 @@ docker build -f Dockerfile .
 | catboost | 0.24.4 |
 | jupyterlab | 3.0.17 |
 | kaggle | 1.5.12 |
-
+| Keras | 2.4.3 |
+| livelossplot | 0.5.4 |
+| matplotlib | 3.2.2 |
+| mxnet | 1.6.0 |
+| numpy | 1.19.3 |
