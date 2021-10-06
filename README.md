@@ -23,5 +23,14 @@ docker pull guyzsarun/ml-toolkit-gpu:latest
 docker build -f Dockerfile .
 ```
 
-
+## Project Dependencies
+| Dependency | Version |
+| --- | --- |
+| Beautifulsoup4 | 4.6.0 |
+| boto | 2.48.0 |
+| boto3 | 1.17.35 |
+| botocore | 1.20.35 |
+| catboost | 0.24.4 |
+| jupyterlab | 3.0.17 |
+| kaggle | 1.5.12 |
 
