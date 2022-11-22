@@ -12,7 +12,7 @@ mxnet==1.6.0
 numpy==1.19.3
 opencv-python==4.5.1.48
 pandas==1.0.5
-Pillow==9.0.0
+Pillow==9.3.0
 plotly==4.14.3
 pytest==3.5.1
 pytorch-lightning==1.2.5
